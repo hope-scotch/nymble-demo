@@ -1,0 +1,4 @@
+{
+  "mongoURI": "mongodb+srv://shawn432:shawn432@nymble.fo9hv.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+  "authToken": "nymbleusertoken"
+}
