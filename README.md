@@ -9,18 +9,18 @@
 This application has been made using React.js (Frontend), Node.js (Backend), MongoDB (Database), Express.js (Server).
 
 Last 5 transactions in the Dashboard
-<img src = "https://github.com/hope-scotch/nymble-demo/tree/main/res/ss-2-dashboard.PNG">
+<img src = "https://github.com/hope-scotch/nymble-demo/blob/main/res/ss-2-dashboard.PNG">
 
 Expenses
 <img src = "https://github.com/hope-scotch/nymble-demo/blob/main/res/ss-1.PNG">
 
 Create a new Expense
-<img src = "https://github.com/hope-scotch/nymble-demo/tree/main/res/ss-4-create.PNG">
+<img src = "https://github.com/hope-scotch/nymble-demo/blob/main/res/ss-4-create.PNG">
 
 Expenses filtered by 'Home' Category
-<img src = "https://github.com/hope-scotch/nymble-demo/tree/main/res/ss-3-filter.PNG">
+<img src = "https://github.com/hope-scotch/nymble-demo/blob/main/res/ss-3-filter.PNG">
 
 Report
-<img src = "https://github.com/hope-scotch/nymble-demo/tree/main/res/ss-1-report.PNG">
+<img src = "https://github.com/hope-scotch/nymble-demo/blob/main/res/ss-5-report.PNG">
 
 
