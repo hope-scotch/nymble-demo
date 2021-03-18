@@ -12,7 +12,7 @@ Last 5 transactions in the Dashboard
 <img src = "https://github.com/hope-scotch/nymble-demo/tree/main/res/ss-2-dashboard.PNG">
 
 Expenses
-<img src = "https://github.com/hope-scotch/nymble-demo/tree/main/res/ss-1.PNG">
+<img src = "https://github.com/hope-scotch/nymble-demo/blob/main/res/ss-1.PNG">
 
 Create a new Expense
 <img src = "https://github.com/hope-scotch/nymble-demo/tree/main/res/ss-4-create.PNG">
