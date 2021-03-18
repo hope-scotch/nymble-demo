@@ -1,0 +1,212 @@
+body {
+  margin: 0px;
+}
+
+.expenses-container {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(3, 15, 51);
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.expenses-main-container {
+  height: 80%;
+  width: 90%;
+  margin: 5vw;
+  margin-top: 2vw;
+  font-size: 2em;
+  display: flex;
+  flex-direction: column;
+  /* overflow-y: scroll; */
+  align-items: center;
+}
+
+.expenses-list {
+  height: 100%;
+  width: 100%;
+  font-size: 0.8em;
+  margin-top: 2vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.expenses-item {
+  display: flex;
+  align-items: center;
+
+  height: 80px;
+  width: 60%;
+  padding-left: 5vw;
+  margin-bottom: 4px;
+  transition: width 0.2s, height 0.5s;
+
+  box-shadow: 0px 0px 5px 2px white;
+  border-radius: 20px;
+}
+
+.expenses-item:hover {
+  cursor: pointer;
+  width: 64%;
+  height: 85px;
+  box-shadow: 0px 0px 5px 5px rgb(0, 255, 128);
+  background-color: rgb(7, 10, 134);
+  color: yellow;
+}
+
+.expenses-item-col-1 {
+  height: 100%;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.expenses-item-col-2 {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.expenses-item-col-3 {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.amount-container {
+  display: flex;
+}
+
+.expenses-list-container {
+  display: flex;
+  height: 80%;
+  width: 100%;
+  /* background-color: aqua; */
+  overflow-y: scroll;
+}
+
+.expense-container {
+  display: flex;
+  height: 20%;
+  width: 80%;
+  cursor: pointer;
+  /* background-color: rgb(23, 201, 103); */
+  text-align: center;
+  justify-content: space-around;
+  align-items: center;
+  color: rgb(255, 255, 255);
+}
+
+.new-expense-button {
+  height: 60px;
+  width: 120px;
+  font-size: 0.5em;
+  background-color: rgb(38, 202, 112);
+  border-radius: 30px;
+  border: none;
+  margin-bottom: 0;
+  transition: width 0.2s, height 0.5s;
+  opacity: 1;
+  color: white;
+}
+
+.filter-button {
+  height: 60px;
+  width: 120px;
+  font-size: 0.5em;
+  background-color: rgb(21, 147, 197);
+  border-radius: 30px;
+  border: none;
+  margin-bottom: 0;
+  transition: width 0.2s, height 0.5s;
+  opacity: 1;
+  color: white;
+}
+
+.delete-button {
+  height: 60px;
+  width: 120px;
+  font-size: 0.8em;
+  background-color: rgb(197, 21, 59);
+  border-radius: 30px;
+  border: none;
+  margin-bottom: 0;
+  transition: width 0.2s, height 0.5s;
+  opacity: 1;
+  color: white;
+}
+
+.delete-button:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 5px 2px rgba(243, 127, 146, 0.877);
+  height: 64px;
+  width: 124px;
+  opacity: 1;
+}
+
+.edit-button {
+  height: 60px;
+  width: 120px;
+  font-size: 0.8em;
+  background-color: rgb(218, 214, 24);
+  border-radius: 30px;
+  border: none;
+  margin-bottom: 0;
+  transition: width 0.2s, height 0.5s;
+  opacity: 1;
+  color: white;
+}
+
+.edit-button:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 5px 2px rgba(231, 243, 127, 0.877);
+  height: 64px;
+  width: 124px;
+  opacity: 1;
+}
+
+.new-expense-button:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 5px 2px rgba(127, 243, 179, 0.877);
+  height: 64px;
+  width: 124px;
+  opacity: 1;
+}
+
+.filter-button:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 5px 2px rgba(67, 189, 238, 0.808);
+  height: 64px;
+  width: 124px;
+  opacity: 1;
+}
+
+/*** Scroll Bar ***/
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgb(3, 15, 51);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(11, 42, 134, 0.788);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(11, 98, 179, 0.788);
+}

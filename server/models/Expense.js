@@ -3,21 +3,22 @@ const mongoose = require('mongoose')
 const ExpenseSchema = new mongoose.Schema({
   date: {
     type: Date,
-  },
-  time: {
-    type: String
+    required: true
   },
   amount: {
-    type: Number
+    type: Number,
+    required: true
   },
   currency: {
-    type: String
+    type: String,
+    required: true
   },
   description: {
     type: String
   },
   category: {
-    type: String
+    type: String,
+    required: true
   },
   owner: {
     type: mongoose.Schema.Types.ObjectId,

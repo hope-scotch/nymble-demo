@@ -16,6 +16,7 @@ const User = require('../../models/User')
 router.get('/api/auth', auth, async (req,res) => {
   try {
     const user = await User.findById(req.user.id).select('-password')
+    
     res.json(user)
   } catch(error) {
     console.error(error.message)
@@ -59,23 +60,14 @@ router.post('/api/auth', [
         .json({ errors: [{ msg: 'Invalid Credentials' }] })
     }
 
-    const payload = {
-      user: {
-        id: user.id
-      }
-    }
+    const payload = { user: { id: user.id }}
 
-    jwt.sign(
-      payload, 
-      config.get('authToken'),
-      { expiresIn: 360000 },
-      (err, token) => {
+    // Login User
+    jwt.sign(payload, config.get('JWT_SECRET'), { expiresIn: 360000 }, (err, token) => {
         if (err) throw err
         res.json({ token }) 
       }  
     )
-
-    // res.send('User registered')
     
   } catch(error) {
     console.log(error.message)

@@ -1,17 +1,39 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+
+import Landing from './components/layout/Landing'
+import Login from './components/auth/Login'
+import Register from './components/auth/Register'
+import Dashboard from './components/views/Dashboard'
+import Expenses from './components/views/Expenses'
+import Report from './components/views/Report'
+
+const App = () => {
+
+  const [authToken, setAuthToken] = useState(null)
+
+  const authHandler = (token) => {
+    setAuthToken(token)
+  }
+
+  return (
+    <div style={{width: window.innerWidth, height: window.innerHeight}}>
+      <Router>
+        <Switch>
+          <Route exact path='/' component={Landing}/>
+          <Route exact path='/login' component={() => <Login authHandler={authHandler}/>}/>
+          <Route exact path='/register' component={Register}/>
+          <Route exact path='/dashboard' component={() => <Dashboard authToken={authToken}/>}/>
+          <Route exact path='/expenses' component={() => <Expenses authToken={authToken}/>}/>
+          <Route exact path='/report' component={() => <Report authToken={authToken}/>}/>
+        </Switch>
+      </Router>
+    </div>
+  )
+}
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <App />,
   document.getElementById('root')
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

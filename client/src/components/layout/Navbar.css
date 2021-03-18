@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+}
+
+.navbar-container {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 100px;
+    background-color: rgb(3,2,14);
+    justify-content: center;
+}
+
+.navbar-menu{
+    display: flex;
+    width: 80%;
+    height: 100%;
+    align-items: center;
+}
+
+
+.navbar-button {
+    display: flex;
+    justify-self: flex-start;
+    width: 200px;
+    height: 30px;
+    text-decoration: none;
+    font-size: 23px;
+    color: white;
+}
+
+.sign-out-button {
+    display: flex;
+    justify-self: flex-end;
+    width: 200px;
+    height: 30px;
+    text-decoration: none;
+    font-size: 23px;
+    color: white;
+    margin-left: auto;
+}

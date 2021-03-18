@@ -1,0 +1,108 @@
+body {
+  margin: 0;
+}
+
+.report-container {
+  background-color: black;
+  color: white;
+  height: 100%;
+  width: 100vw;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.report-main-container {
+  height: 80%;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  margin: 2vw;
+  font-size: 1.5em;
+}
+
+.report-button {
+  height: 60px;
+  width: 120px;
+  font-size: 1em;
+  border-radius: 30px;
+  border: none;
+  margin: 2vw;
+  transition: width 0.2s, height 0.5s;
+  opacity: 1;
+  color: white;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.report-button:hover {
+  cursor: pointer;
+  height: 64px;
+  width: 124px;
+  opacity: 1;
+}
+
+.report-stats {
+  width: 70%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.report-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.green-color {
+  background-color: rgb(38, 202, 112);
+}
+
+.green-color:hover {
+  box-shadow: 0px 0px 5px 2px rgba(127, 243, 179, 0.877);
+}
+
+.red-color {
+  background-color: rgb(202, 38, 60);
+}
+
+.red-color:hover {
+  box-shadow: 0px 0px 5px 2px rgba(247, 58, 99, 0.877);
+}
+
+.blue-color {
+  background-color: rgb(32, 115, 211);
+}
+
+.blue-color:hover {
+  box-shadow: 0px 0px 5px 2px rgba(127, 239, 243, 0.877);
+}
+
+.yellow-color {
+  background-color: rgb(206, 209, 23);
+}
+
+.yellow-color:hover {
+  box-shadow: 0px 0px 5px 2px rgba(252, 255, 93, 0.877);
+}
+
+.orange-color {
+  background-color: rgb(212, 114, 22);
+}
+
+.orange-color:hover {
+  box-shadow: 0px 0px 5px 2px rgba(255, 188, 86, 0.877);
+}
+
+.pink-color {
+  background-color: rgb(202, 38, 114);
+}
+
+.pink-color:hover {
+  box-shadow: 0px 0px 5px 2px rgba(240, 94, 143, 0.877);
+}

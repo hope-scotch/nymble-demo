@@ -50,25 +50,6 @@ router.post('/api/users', [
 
     await user.save()
 
-    // Return jsonwebtoken
-    const payload = {
-      user: {
-        id: user.id
-      }
-    }
-
-    jwt.sign(
-      payload, 
-      config.get('authToken'),
-      { expiresIn: 360000 },
-      (err, token) => {
-        if (err) throw err
-        res.json({ token }) 
-      }  
-    )
-
-    // res.send('User registered')
-    
   } catch(error) {
     console.log(error.message)
     res.status(500).send('Server error')

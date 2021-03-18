@@ -6,7 +6,7 @@ const expenseRoute = require('./routes/api/expense.js')
 const authRoute = require('./routes/api/auth.js')
 
 const app = express()
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || 5000
 
 // Connect Database
 connectDB()

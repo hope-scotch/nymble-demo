@@ -27,7 +27,32 @@ try {
 router.get('/api/expenses', auth, async (req, res) => {
 
   try {
-    const expenses = await Expense.find({ owner: req.user.id })
+    const category = req.query.category
+    const week = parseInt(req.query.week)
+    const desc = req.query.sort
+
+    let today = new Date()
+    let expenses
+    
+    if(desc){
+      expenses = await Expense.find({}).sort('-date')
+      expenses = expenses.slice(0,5)
+      return res.send(expenses)
+    }
+
+    if(week){
+      let start = new Date(today.getFullYear(),today.getMonth(),(week-1)*7)
+      let end = new Date(today.getFullYear(),today.getMonth(),(week)*7)
+
+      expenses = await Expense.find({date: {"$gte": start, "$lt": end}, owner: req.user.id })
+      return res.send(expenses)
+    }
+
+    if (category === 'None')
+      expenses = await Expense.find({ owner: req.user.id })
+    else
+      expenses = await Expense.find({ category: req.query.category, owner: req.user.id })
+
     res.send(expenses)
   } catch(e) {
     res.status(400).send({ msg: e.message })
@@ -35,7 +60,7 @@ router.get('/api/expenses', auth, async (req, res) => {
 })
 
 // @route GET api/expenses/:id
-// @desc Get specific task
+// @desc Get specific expense
 // @access Private
 
 router.get('/api/expenses/:id', auth, async(req, res) => {
@@ -49,7 +74,7 @@ router.get('/api/expenses/:id', auth, async(req, res) => {
 })
 
 // @route PATCH api/expenses/:id
-// @desc Update a task
+// @desc Update a expense
 // @access Private
 
 router.patch('/api/expenses/:id', auth, async (req, res) => {
@@ -74,7 +99,7 @@ router.patch('/api/expenses/:id', auth, async (req, res) => {
 })
 
 // @route DELETE api/expenses/:id
-// @desc Delete a task
+// @desc Delete a expense
 // @access Private
 
 router.delete('/api/expenses/:id', auth, async (req, res) => {

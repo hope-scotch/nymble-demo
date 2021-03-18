@@ -1,0 +1,23 @@
+body {
+  margin: 0px;
+}
+
+.dashboard-container {
+  height: 100%;
+  width: 100vw;
+  background-color: rgb(3, 15, 51);
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard-main-container {
+  height: 90%;
+  width: 95%;
+  display: flex;
+  font-size: 2em;
+}
+
+.total-amount {
+  width: 30%;
+}

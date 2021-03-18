@@ -1,0 +1,83 @@
+body {
+  margin: 0px;
+}
+
+.landing-container {
+  background-color: rgb(3, 15, 51);
+  height: 100%;
+  width: 100vw;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+h1 {
+  color: white;
+  margin-top: 5vw;
+}
+
+.buttons-container {
+  display: flex;
+  margin-top: 10vw;
+}
+
+@media (max-width: 680px) {
+  .buttons-container {
+    flex-direction: column;
+  }
+}
+
+.login-button {
+  background-color: rgb(22, 104, 255);
+  color: white;
+  border-radius: 30px;
+  border: none;
+  
+  height: 80px;
+  width: 150px;
+  font-size: 2em;
+  margin: 10px;
+
+  transition: width 0.2s, height 0.5s;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.login-button:hover {
+  height: 84px;
+  width: 155px;
+  cursor: pointer;
+  box-shadow: 0px 0px 5px 5px rgba(53, 231, 255, 0.85);
+}
+
+.register-button {
+  background-color: rgb(0, 190, 133);
+  color: white;
+  border-radius: 30px;
+  border: none;
+
+  height: 80px;
+  width: 180px;
+  font-size: 2em;
+  margin: 10px;
+
+  transition: width 0.2s, height 0.5s;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.register-button:hover {
+  height: 84px;
+  width: 186px;
+  cursor: pointer;
+  box-shadow: 0px 0px 5px 5px rgba(33, 255, 189, 0.85);
+}
